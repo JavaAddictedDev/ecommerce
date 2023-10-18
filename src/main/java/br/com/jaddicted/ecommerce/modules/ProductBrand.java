@@ -5,6 +5,7 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 @Table(name = "product_brand")
@@ -29,5 +30,17 @@ public class ProductBrand implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ProductBrand that)) return false;
+        return Objects.equals(getId(), that.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId());
     }
 }
