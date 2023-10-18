@@ -24,7 +24,7 @@ public class ProductBrand implements Serializable {
         return id;
     }
 
-    public String getIName() {
+    public String getName() {
         return name;
     }
 

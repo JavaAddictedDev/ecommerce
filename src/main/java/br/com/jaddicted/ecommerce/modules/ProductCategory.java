@@ -26,7 +26,7 @@ public class ProductCategory implements Serializable {
         return id;
     }
 
-    public String getIName() {
+    public String getName() {
         return name;
     }
 
